@@ -10,12 +10,30 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-           // string a;
+            // string a;
             Console.WriteLine("as pakeiciau v2");
+            funkas fnk = new funkas();
+            fnk.KasTu();
             Console.ReadKey();
+            fnk.kurk("alalal");
+            fnk.KasTu();
+            Console.ReadKey();
+
         }
-        public void funkas(int w)
-        {
+
+    }
+    class funkas{
+        bool sukurtas;
+        string vardas = "neturiu vardo";
+
+        public void kurk(string vrd) {
+            sukurtas = true;
+            vardas = vrd;
+
+        }
+        public void KasTu() {
+            System.Console.WriteLine("Mano vardas: "+vardas);
+            System.Console.WriteLine("Sukurtas: "+sukurtas);
 
         }
     }
