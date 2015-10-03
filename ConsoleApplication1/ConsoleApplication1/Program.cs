@@ -11,31 +11,37 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             // string a;
-            Console.WriteLine("as pakeiciau v2");
-            funkas fnk = new funkas();
-            fnk.KasTu();
-            Console.ReadKey();
-            fnk.kurk("alalal");
-            fnk.KasTu();
+            //   Console.WriteLine("as pakeiciau v2");
+            //  Funkas fnk = new Funkas();
+            // Console.WriteLine("week number"+ fnk.MetuSavaite(DateTime.Now));
+            Arbuz buzas = new Arbuz("skanus");
+            Arbuz buzas1 = new Arbuz { Skonis = "liuks", nr = 1 };
+            buzas1.nr = 32;
+            System.Console.WriteLine("a "+buzas.ToString());
+            System.Console.WriteLine("b " + buzas1.Skonis);
+
+            //System.Console.WriteLine("b" + buzas.Skonis());
             Console.ReadKey();
 
         }
 
     }
-    class funkas{
-        bool sukurtas;
-        string vardas = "neturiu vardo";
 
-        public void kurk(string vrd) {
-            sukurtas = true;
-            vardas = vrd;
+    public class Arbuz
+    { 
+        public string Skonis { get; set; }
+        public int nr { get; set; }
 
-        }
-        public void KasTu() {
-            System.Console.WriteLine("Mano vardas: "+vardas);
-            System.Console.WriteLine("Sukurtas: "+sukurtas);
+        public Arbuz() { }
 
+        public Arbuz(string sk)
+        {
+            Skonis = sk;
+        } 
+
+        public override string ToString()
+        {
+            return "Skonis: " + Skonis  + ",nr: " + nr;
         }
     }
-    
 }
