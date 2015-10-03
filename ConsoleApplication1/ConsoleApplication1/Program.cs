@@ -11,8 +11,13 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
            // string a;
-            Console.WriteLine("as");
+            Console.WriteLine("as pakeiciau v2");
             Console.ReadKey();
         }
+        public void funkas(int w)
+        {
+
+        }
     }
+    
 }
